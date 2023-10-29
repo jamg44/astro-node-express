@@ -1,14 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Card from '../components/Card.astro'
+import CounterSolid from '../components/solid/Counter'
+import CounterSvelte from '../components/svelte/Counter.svelte'
 
 const text: string = 'Astro in Express'
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<img src="/images/icon.svg" width="100"></image>
-		<h1>Welcome to <span class="text-gradient">{text}</span></h1>
+		<h1>
+			<img src="/images/icon.svg"></image>
+			Welcome to <span class="text-gradient">{text}</span>
+		</h1>
 		<p class="instructions">
 			To get started, open the directory <code>src/pages</code> in your project.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
@@ -25,6 +29,17 @@ const text: string = 'Astro in Express'
 				body=""
 			/>
 		</ul>
+		<ul>
+			<li>
+				<!-- Solid component (use client:only to allow interactivity) -->
+				<CounterSolid client:only="solid"></CounterSolid>
+			</li>
+			<li>
+				<!-- Svelte component (use client:only to allow interactivity)-->
+				<CounterSvelte client:only="svelte"></CounterSvelte>
+			</li>
+		</ul>
+
 	</main>
 </Layout>
 
@@ -84,5 +99,8 @@ const text: string = 'Astro in Express'
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 2rem;
 		padding: 0;
+	}
+	main h1 img {
+		width: 50px;
 	}
 </style>

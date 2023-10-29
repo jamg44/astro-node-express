@@ -44,6 +44,6 @@ Add express entrypoints.
 
 ## Todo
 
-- [ ] Add Astro initial pages/styles/layout
-- [ ] Add Astro island example
+- [X] Add Astro initial pages/styles/layout
+- [X] Add Astro island examples
 - [ ] Add Astro hot reload on changes

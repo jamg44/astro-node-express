@@ -5,6 +5,10 @@
     "dist",
     "app.js",
     "routes/**/*",
-    "public/**/*",
+    "public/**/*"
   ],
+  "compilerOptions": {
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js"
+  }
 }

@@ -41,3 +41,9 @@ npx astro build
 ```
 
 Add express entrypoints.
+
+## Todo
+
+[ ] Add Astro initial pages/styles/layout
+[ ] Add Astro island example
+[ ] Add Astro hot reload on changes

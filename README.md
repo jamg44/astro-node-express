@@ -1,6 +1,8 @@
 # Astro Node Express Example
 
-This repo shows an example of how to integrate Astro with an existing Express application.
+This repo shows an example of how to integrate Astro with an existing Express website.
+
+**This will help you when you have an existing Express Website and whant to migrate it to Astro. Astro does not need Express**.
 
 Reference: https://docs.astro.build/en/guides/integrations-guide/node/
 

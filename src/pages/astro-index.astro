@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro'
 import Card from '../components/Card.astro'
 import CounterSolid from '../components/solid/Counter'
 import CounterSvelte from '../components/svelte/Counter.svelte'
+import CounterReact from '../components/react/Counter'
 
 const text: string = 'Astro in Express'
 ---
@@ -37,6 +38,10 @@ const text: string = 'Astro in Express'
 			<li>
 				<!-- Svelte component (use client:only to allow interactivity)-->
 				<CounterSvelte client:only="svelte"></CounterSvelte>
+			</li>
+			<li>
+				<!-- React component (use client:only to allow interactivity)-->
+				<CounterReact client:only="react"></CounterReact>
 			</li>
 		</ul>
 

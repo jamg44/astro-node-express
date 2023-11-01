@@ -42,7 +42,25 @@ export default defineConfig({
 npx astro build
 ```
 
-Add express entrypoints.
+## 3 Add Astro to Express
+
+```js
+// app.js
+const setupAstroMiddleware = require('./lib/setupAstroMiddleware')
+
+/** Astro pages/middlewares */
+setupAstroMiddleware('/', path.join(__dirname, 'dist'), app)
+```
+
+Add package.json scripts:
+
+```json
+  "scripts": {
+    "start": "npm run astro:build && node ./bin/www",
+    "dev": "DEBUG=astro-node-express:* nodemon --exec \"npm run astro:build && node ./bin/www\" -e js,mjs,cjs,json,astro,ts,tsx --ignore dist/",
+    "astro:build": "astro check && astro build --silent"
+  },
+```
 
 ## Todo
 
